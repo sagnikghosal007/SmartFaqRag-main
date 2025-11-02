@@ -126,24 +126,11 @@ Use APIs directly from major AI providers:
 
 ## 🧠 Architecture Overview
 
-+-----------------------+
-| User Query (API) |
-+----------+------------+
-|
-v
-+-----------------------+
-| Retriever Layer | <-- Embeddings + Vector Search
-+----------+------------+
-|
-v
-+-----------------------+
-| LLM Reasoning Layer | <-- Spring AI + Chosen Model
-+----------+------------+
-|
-v
-+-----------------------+
-| Final Answer Output |
-+-----------------------+
+flowchart TD
+    A[🧑 User Query (API)] --> B[🔍 Retriever Layer<br/>(Embeddings + Vector Search)]
+    B --> C[🧠 LLM Reasoning Layer<br/>(Spring AI + Chosen Model)]
+    C --> D[💬 Final Answer Output]
+
 
 
 ---
